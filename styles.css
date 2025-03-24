@@ -145,6 +145,46 @@
   .gallery-image img:hover {
     transform: scale(1.02);
   }
+  /* ======= SECTION ÉVÉNEMENT - PAGE D'ACCUEIL ======= */
+.section {
+  background-color: rgba(255, 255, 255, 0.02);
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: 60px auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+}
+
+.section h1 {
+  color: #e94eff;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 30px;
+  animation: fadeInDown 1s ease;
+}
+
+.section p {
+  font-size: 16px;
+  color: #ddd;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  text-align: justify;
+}
+
+.section img {
+  display: block;
+  max-width: 50%;
+  border-radius:20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+
+.section img:hover {
+  transform: scale(1.03);
+}
+
   /* Smartphone */
 @media screen and (max-width: 768px) {
   .menu {

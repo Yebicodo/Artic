@@ -1,0 +1,179 @@
+/* ======== ACTUALITÉS DESIGN EN COLONNES ======== */
+ /* HEADER CENTRÉ ET ANIMÉ */
+ .main-header {
+    text-align: center;
+    padding: 40px 20px 20px;
+    background-color: transparent;
+    z-index: 10;
+    position: relative;
+  }
+
+  .logo-center img {
+    max-width: 80px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+  }
+  .logo-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+    
+  .nav-center .nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    list-style: none;
+    padding: 10px 0;
+  }
+  .nav-links li a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #f2f2f2;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  .nav-links li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #e94eff;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+  .nav-links li a:hover {
+    color: #e94eff;
+  }
+  .nav-links li a:hover::after {
+    width: 100%;
+  }
+  
+body {
+    background-color: #f5f6f8;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    background-image: url('imgdefond.jpg'); /* <-- chemin */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+  }
+  
+ 
+.actualites {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .actualites h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #acacac;
+  }
+  
+  .actualites article {
+    margin-bottom: 60px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.7); /* <-- fond clair transparent */
+    backdrop-filter: blur(5px); /* un peu de flou pour l’effet "verre" */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .actualites article h3 {
+    color: #000000;
+  }
+  
+  .actualites article p.date {
+    color: #000000;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .actualites article img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin: 15px 0;
+  }
+  
+  .actualites article p.contenu {
+    color: #000000;
+  }
+  
+  .actualites article a.btn {
+    margin-top: 15px;
+    display: inline-block;;
+    color: #222121;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .actualites article a.btn:hover {
+    background-color: #808080;
+  }
+
+  /* Smartphone */
+@media screen and (max-width: 768px) {
+    .menu {
+      flex-direction: column;
+    }
+  }
+  
+  /* Tablette */
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    .menu {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+  
+  /* Ordinateur */
+  @media screen and (min-width: 1025px) {
+    .menu {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  /* Menu Hamburger */
+  .hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 10px;
+    color: #f2f2f2;
+    text-align: right;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.9);
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      z-index: 20;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  }
+  

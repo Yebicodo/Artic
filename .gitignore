@@ -1,0 +1,16 @@
+# Fichiers de configuration sensibles
+config.php
+.env
+
+# Fichiers uploadés (PDF, images, etc.)
+uploads/
+
+# Fichiers système (Windows / macOS)
+Thumbs.db
+.DS_Store
+
+# Logs
+*.log
+
+# Caches temporaires
+*.cache

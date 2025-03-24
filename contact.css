@@ -1,50 +1,154 @@
-.contact {
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: rgba(255,255,255,0.9);
-    border-radius: 12px;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-image: url('image de galerie/Art2.jpg'); /* ← adapte le chemin */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
   }
+  
+/* HEADER CENTRÉ ET ANIMÉ */
+.main-header {
+    text-align: center;
+    padding: 40px 20px 20px;
+    background-color: transparent;
+    z-index: 10;
+    position: relative;
+  }
+
+  .logo-center img {
+    max-width: 80px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+  }
+  .logo-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+    
+  .nav-center .nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    list-style: none;
+    padding: 10px 0;
+  }
+  .nav-links li a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #5f5858;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  .nav-links li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #e94eff;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+  .nav-links li a:hover {
+    color: #e94eff;
+  }
+  .nav-links li a:hover::after {
+    width: 100%;
+  }
+  
+  /* ANIMATION */
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  #background-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+  }
+  .contact {
+    background-color: rgb(255 255 255 / 25%); /* fond clair par-dessus l’image */
+    border-radius: 16px;
+    padding: 30px;
+    max-width: 600px;
+    margin: 60px auto;
+  }
+  
   
   .contact h2 {
     text-align: center;
-    margin-bottom: 20px;
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #333;
   }
   
   .contact label {
     display: block;
-    margin-top: 10px;
+    margin-top: 15px;
     font-weight: bold;
+    color: #444;
   }
   
   .contact input,
   .contact textarea {
     width: 100%;
-    padding: 8px;
-    margin-top: 4px;
-    border-radius: 6px;
+    padding: 10px 12px;
+    margin-top: 6px;
+    border-radius: 8px;
     border: 1px solid #ccc;
+    font-size: 15px;
+    box-sizing: border-box;
   }
   
   .contact button {
-    margin-top: 15px;
-    padding: 10px 20px;
-    border: none;
-    background-color: #e94eff;
+    display: block;
+    margin: 20px auto 0;
+    background-color: #9147ff;
     color: white;
-    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact button:hover {
+    background-color: #7a3ed8;
   }
   
   .success {
+    text-align: center;
     color: green;
     font-weight: bold;
-    text-align: center;
   }
   
   .errors {
     color: red;
+    background: #ffe5e5;
+    padding: 10px;
+    border-radius: 8px;
     list-style: none;
-    text-align: center;
+    margin-bottom: 15px;
+    font-size: 14px;
   }
   

@@ -63,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <head>
   <meta charset="UTF-8">
   <title>Contact</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="contact.css">
 </head>
 <body>
   <?php include 'header.php'; ?>
